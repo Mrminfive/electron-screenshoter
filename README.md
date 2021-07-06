@@ -57,7 +57,7 @@ screenshot().then(({ base64 }) => {
 
 ## Notice
 
-windows 系统下使用 [nircmd](nircmd) 程序捕捉桌面帧，为保证一致性，插件已将该可执行文件集成至项目中，打包时需要在 `package.json` 中增加以下配置：
+windows 系统下使用 [nircmd][nircmd] 程序捕捉桌面帧，为保证一致性，插件已将该可执行文件集成至项目中，打包时需要在 `package.json` 中增加以下配置：
 
 ```json
 {
@@ -73,7 +73,7 @@ windows 系统下使用 [nircmd](nircmd) 程序捕捉桌面帧，为保证一致
 }
 ```
 
-详细参见：[electron-builder-doc: Overridable per Platform Options](electron-builder-doc)
+详细参见：[electron-builder-doc: Overridable per Platform Options][electron-builder-doc]
 
 [nircmd]: https://www.nirsoft.net/utils/nircmd.html
 [electron-builder-doc]: https://www.electron.build/configuration/configuration#overridable-per-platform-options
