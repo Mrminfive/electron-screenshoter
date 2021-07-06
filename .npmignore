@@ -1,0 +1,6 @@
+__example__/
+__test__/
+src/
+scripts/
+.*
+jest.config.js

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./asset/lib/canvastools/canvastools.css" />
+    <style>
+      body {
+        -webkit-app-region: no-drag;
+        user-select: none;
+      }
+
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      #canvasMask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 40;
+        cursor: move;
+        display: none;
+        background: transparent;
+        box-sizing: content-box;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .tipNum {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        z-index: 40;
+        display: none;
+        font-size: 12px;
+        cursor: pointer;
+      }
+
+      svg {
+        position: absolute;
+        z-index: 30;
+        pointer-events: none;
+      }
+
+      #canvas {
+        position: absolute;
+        z-index: 20;
+        display: none;
+      }
+
+      #black-mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.4;
+        z-index: 20;
+      }
+
+      #maskImg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 30;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        /* -webkit-mask-size: 100%; */
+        /* mask-mode: alpha; */
+        mask: url(#maskSvg);
+        /* -webkit-mask-image: url(#maskSvg); */
+      }
+
+      #img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+      }
+
+      .tool {
+        display: none;
+        position: absolute;
+        z-index: 40;
+        cursor: pointer;
+      }
+
+      .icon {
+        display: inline-block;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: transparent;
+        border: 3px solid #2f8ddd;
+        display: none;
+        z-index: 99;
+      }
+
+      .left_top {
+        /* left:10px;
+            top:10px; */
+        border-bottom: 0;
+        border-right: 0;
+        cursor: nwse-resize;
+      }
+
+      .left_bottom {
+        /* left:80px;
+            top:10px; */
+        border-top: 0;
+        border-right: 0;
+        cursor: nesw-resize;
+      }
+
+      .right_top {
+        /* left:10px;
+            top:80px; */
+        border-bottom: 0;
+        border-left: 0;
+        cursor: nesw-resize;
+      }
+
+      .right_bottom {
+        /* left:80px;
+            top:80px; */
+        border-top: 0;
+        border-left: 0;
+        cursor: nwse-resize;
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas id="canvas"></canvas>
+    <div id="black-mask"></div>
+    <canvas id="canvasMask" data-drag="drag"></canvas>
+    <span class="tipNum">200x200</span>
+    <div class="tool"></div>
+    <span
+      data-zoom="zoom"
+      data-placement="left-top"
+      class="icon left_top"
+    ></span>
+    <span
+      data-zoom="zoom"
+      data-placement="right-top"
+      class="icon right_top"
+    ></span>
+    <span
+      data-zoom="zoom"
+      data-placement="left-bottom"
+      class="icon left_bottom"
+    ></span>
+    <span
+      data-zoom="zoom"
+      data-placement="right-bottom"
+      class="icon right_bottom"
+    ></span>
+    <img id="img" />
+    <svg width="100%" height="100%">
+      <mask id="maskSvg">
+        <rect id="maskRect" x="0" y="0" width="0" height="0" fill="#fff"></rect>
+      </mask>
+      <image id="maskImg" width="100%" height="100%"></image>
+    </svg>
+  </body>
+  <script src="./asset/lib/canvastools/canvastools.js"></script>
+  <script src="./index.js"></script>
+</html>

@@ -1,0 +1,23 @@
+{
+  "root": true,
+
+  "extends": [
+    "eslint-config-ali/typescript",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+
+  "plugins": ["prettier"],
+
+  "rules": {
+    "prettier/prettier": "error",
+
+    "comma-dangle": "off",
+
+    // 模块不强制导出 default
+    "import/prefer-default-export": "off",
+
+    // 解决可选链语法错误问题
+    "no-unused-expressions": "off"
+  }
+}

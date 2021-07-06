@@ -1,0 +1,21 @@
+{
+  "editor.formatOnSave": true,
+
+  "prettier.requireConfig": true,
+
+  "eslint.enable": true,
+  "eslint.validate": ["typescript"],
+
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/*.map": true,
+    "**/node_modules": true,
+    "**/dev": true,
+    "**/dist": true,
+    ".eslintcache": true
+  }
+}

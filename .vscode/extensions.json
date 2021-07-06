@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "pmneo.tsimporter",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "eamodio.gitlens",
+    "EditorConfig.editorconfig"
+  ]
+}
