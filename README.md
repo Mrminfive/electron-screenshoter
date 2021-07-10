@@ -5,6 +5,7 @@ electron 截图插件
 ![types](https://img.shields.io/npm/types/typescript)
 ![electron](https://img.shields.io/badge/electron-%3E%3D3.0.0-green)
 ![platform](https://img.shields.io/badge/platform-Mac%20%7C%20Windows-orange)
+![download](https://img.shields.io/npm/dt/electron-screenshoter)
 
 ## Usage
 
