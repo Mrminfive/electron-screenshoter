@@ -20,7 +20,7 @@ yarn add electron-screenshoter
 ### 主进程
 
 ```js
-const { initMain, close } = require('electron-screenshot');
+const { initMain, close } = require('electron-screenshoter');
 
 app.on('ready', () => {
   const win = new BrowserWindow();
@@ -49,7 +49,7 @@ app.on('ready', () => {
 ### 渲染进程
 
 ```js
-const { screenshot } = require('electron-screenshot');
+const { screenshot } = require('electron-screenshoter');
 
 screenshot().then(({ base64 }) => {
   console.log('截图 base64 地址: ', base64);
