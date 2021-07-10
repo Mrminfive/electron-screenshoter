@@ -9,7 +9,7 @@ electron 截图插件
 
 ## Usage
 
-内网安装
+安装
 
 ```shell
 yarn add electron-screenshoter
